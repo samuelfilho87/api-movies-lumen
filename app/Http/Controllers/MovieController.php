@@ -31,6 +31,7 @@ class MovieController extends Controller
     public function search($word)
     {
         return Movie::where('title_br', 'LIKE', '%' . $word . '%')
+            ->orWhere('id', 'LIKE', $word)
             ->orWhere('original_title', 'LIKE', '%' . $word . '%')
             ->orWhere('category', 'LIKE', '%' . $word . '%')
             ->orWhere('year', 'LIKE', '%' . $word . '%')

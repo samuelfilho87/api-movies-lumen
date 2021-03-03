@@ -20,7 +20,7 @@ class MovieController extends Controller
 
     public function index()
     {
-        return Movie::all();
+        return Movie::all()->orderBy('title_br');
     }
 
     public function show($id)

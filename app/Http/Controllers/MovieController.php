@@ -13,9 +13,9 @@ class MovieController extends Controller
      *
      * @return void
      */
-    public function __construct(Movie $course)
+    public function __construct(Movie $movie)
     {
-        $this->courser = $course;
+        $this->movie = $movie;
     }
 
     public function index()
@@ -77,7 +77,7 @@ class MovieController extends Controller
         return response()->json([
             'data' => [
                 'message' => 'Filme removido com sucesso',
-                'course' => $movie
+                'movie' => $movie
             ]
         ]);
     }

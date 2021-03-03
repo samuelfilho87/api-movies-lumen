@@ -48,7 +48,7 @@ class MovieController extends Controller
 
         return response()->json([
             'data' => [
-                'message' => 'Filme foi criado com sucesso',
+                'message' => 'Filme foi cadastrado com sucesso',
                 'movie' => $movie
             ]
         ]);

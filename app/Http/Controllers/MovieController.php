@@ -38,7 +38,8 @@ class MovieController extends Controller
             ->orWhere('resume', 'ilike', '%' . $word . '%')
             ->orWhere('directors', 'ilike', '%' . $word . '%')
             ->orWhere('writers', 'ilike', '%' . $word . '%')
-            ->orWhere('stars', 'ilike', '%' . $word . '%')->get();
+            ->orWhere('stars', 'ilike', '%' . $word . '%')
+            ->orderBy('title_br')->get();
     }
 
     public function store(Request $request)

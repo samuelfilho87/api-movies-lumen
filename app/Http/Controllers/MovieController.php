@@ -30,15 +30,15 @@ class MovieController extends Controller
 
     public function search($word)
     {
-        return Movie::where('title_br', 'LIKE', '%' . $word . '%')
-            ->orWhere('id', 'LIKE', $word)
-            ->orWhere('original_title', 'LIKE', '%' . $word . '%')
-            ->orWhere('category', 'LIKE', '%' . $word . '%')
-            ->orWhere('year', 'LIKE', '%' . $word . '%')
-            ->orWhere('resume', 'LIKE', '%' . $word . '%')
-            ->orWhere('directors', 'LIKE', '%' . $word . '%')
-            ->orWhere('writers', 'LIKE', '%' . $word . '%')
-            ->orWhere('stars', 'LIKE', '%' . $word . '%')->get();
+        return Movie::where('title_br', 'ilike', '%' . $word . '%')
+            ->orWhere('id', 'ilike', $word)
+            ->orWhere('original_title', 'ilike', '%' . $word . '%')
+            ->orWhere('category', 'ilike', '%' . $word . '%')
+            ->orWhere('year', 'ilike', '%' . $word . '%')
+            ->orWhere('resume', 'ilike', '%' . $word . '%')
+            ->orWhere('directors', 'ilike', '%' . $word . '%')
+            ->orWhere('writers', 'ilike', '%' . $word . '%')
+            ->orWhere('stars', 'ilike', '%' . $word . '%')->get();
     }
 
     public function store(Request $request)

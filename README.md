@@ -1,3 +1,11 @@
+# API: Rotas
+- **`GET /movies`**: Rota que lista todos os filmes;
+- **`GET /movies/:id`**: Rota que lista o filme com o `id` passado no parâmetro da rota;
+- **`GET /movies/search/:word`**: Rota que busca filmes que contenham as palavras passadas no parâmetro `word` da rota;
+- **`POST /movies`**: Rota para cadastrar um novo filme, deve receber `title_br`, `original_title`, `category`, `year`, `resume`, `directors`, `writers` e `stars` dentro do corpo da requisição;
+- **`PUT /movies/:id`**: Rota para editar um filme já cadastrado que possua o `id` igual ao `id` presente nos parâmetros da rota;
+- **`DELETE /movies/:id`**: Rota deleta filme com o `id` presente nos parâmetros da rota;
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
